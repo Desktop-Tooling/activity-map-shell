@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #1a1b1e;
+  color: #e4e4e7;
+  overflow: hidden;
+}
+
+.react-flow__attribution { display: none; }
+.react-flow__controls { opacity: 0.85; }
+.react-flow__edge-path { stroke: #3f3f46; stroke-width: 2; }
+.react-flow__edge.selected .react-flow__edge-path { stroke: #6366f1; }
+
+/* Process block node */
+.process-block {
+  width: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #27272a;
+  border: 2px solid #3f3f46;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.process-block[data-selected="true"] { border-color: #6366f1; box-shadow: 0 0 0 2px rgba(99,102,241,0.4); }
+.process-block:hover { border-color: #52525b; }
+
+.process-block-preview {
+  position: relative;
+  height: 100px;
+  background: #18181b;
+}
+.process-block-screenshot,
+.process-block-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.process-block-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #27272a 0%, #18181b 100%);
+}
+.process-block-icon {
+  font-size: 28px;
+  font-weight: 700;
+  color: #71717a;
+  text-transform: uppercase;
+}
+.process-block-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48px;
+  background: linear-gradient(to top, #27272a, transparent);
+  pointer-events: none;
+}
+
+.process-block-footer {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  min-height: 36px;
+}
+.process-block-title {
+  flex: 1;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #a1a1aa;
+}
+.process-block-refocus {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  font-size: 11px;
+  border: none;
+  border-radius: 6px;
+  background: #3f3f46;
+  color: #e4e4e7;
+  cursor: pointer;
+}
+.process-block-refocus:hover { background: #52525b; }
+.process-block-actions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.process-block-capture {
+  padding: 4px 6px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #3f3f46;
+  color: #e4e4e7;
+  cursor: pointer;
+}
+.process-block-capture:hover:not(:disabled) { background: #52525b; }
+.process-block-capture:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.node-handle {
+  width: 8px;
+  height: 8px;
+  background: #6366f1;
+  border: none;
+}
+
+/* App launcher popup */
+.app-launcher-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.app-launcher-popup {
+  background: #27272a;
+  border-radius: 12px;
+  border: 1px solid #3f3f46;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 70vh;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.app-launcher-tabs {
+  display: flex;
+  border-bottom: 1px solid #3f3f46;
+}
+.app-launcher-tabs button {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: #a1a1aa;
+  font-size: 13px;
+  cursor: pointer;
+}
+.app-launcher-tabs button.active { background: #3f3f46; color: #e4e4e7; }
+.app-launcher-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.app-launcher-list li { margin: 2px 0; }
+.app-launcher-list button {
+  width: 100%;
+  padding: 10px 12px;
+  text-align: left;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #e4e4e7;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.app-launcher-list button:hover { background: #3f3f46; }
+.attach-title { font-size: 11px; color: #71717a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-launcher-close {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #3f3f46;
+  background: transparent;
+  color: #71717a;
+  font-size: 12px;
+  cursor: pointer;
+}
+.app-launcher-close:hover { background: #3f3f46; color: #e4e4e7; }
+
+.panel-title {
+  font-size: 12px;
+  color: #71717a;
+  padding: 8px 12px;
+  background: rgba(24,24,27,0.9);
+  border-radius: 8px;
+}

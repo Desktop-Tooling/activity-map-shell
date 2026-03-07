@@ -1,0 +1,35 @@
+{
+  "name": "activity-map-shell",
+  "version": "1.0.0",
+  "description": "Temporal activity map shell - 2D process graph for Windows",
+  "main": "dist-main/index.js",
+  "scripts": {
+    "dev": "concurrently \"pnpm run dev:vite\" \"pnpm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "tsc -p tsconfig.main.json && electron .",
+    "build": "vite build && tsc -p tsconfig.main.json",
+    "start": "electron .",
+    "preview": "vite preview"
+  },
+  "keywords": ["electron", "windows", "activity-map", "process-manager"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.3",
+  "dependencies": {
+    "@xyflow/react": "^12.10.1",
+    "electron": "^40.8.0",
+    "json5": "^2.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "concurrently": "^9.2.1",
+    "electron-builder": "^26.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
