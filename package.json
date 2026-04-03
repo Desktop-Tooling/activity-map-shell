@@ -17,7 +17,7 @@
   "packageManager": "pnpm@10.30.3",
   "dependencies": {
     "@xyflow/react": "^12.10.1",
-    "electron": "^40.8.0",
+    "electron": "^40.8.4",
     "json5": "^2.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
