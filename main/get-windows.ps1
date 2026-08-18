@@ -43,11 +43,13 @@ foreach ($line in [Win32]::Results) {
         $hwnd = $parts[0]
         $pid = $parts[1]
         $title = $parts[2]
+        $startTime = $null
         try {
             $proc = Get-Process -Id $pid -ErrorAction SilentlyContinue
             $pname = if ($proc) { $proc.ProcessName } else { "Unknown" }
+            if ($proc -and $proc.StartTime) { $startTime = $proc.StartTime.ToString("o") }
         } catch { $pname = "Unknown" }
-        $items += [PSCustomObject]@{ hwnd = $hwnd; processId = [int]$pid; title = $title; processName = $pname }
+        $items += [PSCustomObject]@{ hwnd = $hwnd; processId = [int]$pid; title = $title; processName = $pname; startTime = $startTime }
     }
 }
 $items | ConvertTo-Json -Compress
