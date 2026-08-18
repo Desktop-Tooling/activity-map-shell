@@ -1,0 +1,29 @@
+= Activity Map Shell
+
+A Windows overlay that shows a temporal activity map of processes and windows. Blocks represent app instances; they connect to a root node and can be grouped into superblocks.
+
+== Concepts
+
+* **Root** :: Placed at middle-left of the main display. All top-level blocks connect to it.
+* **Block** :: One process/window or a placeholder ("New app") until you launch or attach an app.
+* **Superblock** :: A group of blocks created by dragging one block onto another. The superblock title is derived from the first appΓÇÖs title or a common term among the first three child titles.
+
+== Creating blocks
+
+* **Click on canvas** :: Creates a new block under the mouse. Only one uninitialized block is allowed at a time; you must finish the launch selection (or attach a window) before creating another. The launcher opens automatically at 90% opacity. If you close the launcher without selecting an app, the block is removed.
+* **Drop from bottom strip** :: Drag a running window from the services strip onto the canvas to add a block for that window at the drop position.
+
+== Layout and navigation
+
+* **Scroll (wheel)** :: Pans the canvas left/right (timeline).
+* **Zoom** :: Use the +/- controls on the canvas; scroll-to-zoom is disabled.
+* **Auto-align** :: The "Auto-align" button sits above the bottom bar. It tiles top-level blocks into columns (top-to-bottom, then left-to-right). Columns are inferred from current horizontal position; when a column is "full," blocks move to the next column.
+
+== Superblocks
+
+Drag one block onto another to create a superblock. The superblockΓÇÖs label is set from the first childΓÇÖs window title, or from a common term among the first three childrenΓÇÖs titles (words that tie for most occurrences, in order of first appearance).
+
+== Keyboard and window
+
+* **Esc** :: Hides (minimizes) the Activity Map window.
+* The app uses a single window (one Alt+Tab entry).

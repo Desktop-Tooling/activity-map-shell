@@ -1,16 +1,16 @@
 <a id="readme-top"></a>
 <div align="center">
-  <a href="https://github.com/AMDphreak/activity-map-shell/graphs/contributors"><img src="https://img.shields.io/github/contributors/AMDphreak/activity-map-shell.svg?style=for-the-badge" alt="Contributors"></a>
-  <a href="https://github.com/AMDphreak/activity-map-shell/network/members"><img src="https://img.shields.io/github/forks/AMDphreak/activity-map-shell.svg?style=for-the-badge" alt="Forks"></a>
-  <a href="https://github.com/AMDphreak/activity-map-shell/stargazers"><img src="https://img.shields.io/github/stars/AMDphreak/activity-map-shell.svg?style=for-the-badge" alt="Stargazers"></a>
-  <a href="https://github.com/AMDphreak/activity-map-shell/issues"><img src="https://img.shields.io/github/issues/AMDphreak/activity-map-shell.svg?style=for-the-badge" alt="Issues"></a>
+  <a href="https://github.com/Desktop-Tooling/activity-map-shell/graphs/contributors"><img src="https://img.shields.io/github/contributors/Desktop-Tooling/activity-map-shell.svg?style=for-the-badge" alt="Contributors"></a>
+  <a href="https://github.com/Desktop-Tooling/activity-map-shell/network/members"><img src="https://img.shields.io/github/forks/Desktop-Tooling/activity-map-shell.svg?style=for-the-badge" alt="Forks"></a>
+  <a href="https://github.com/Desktop-Tooling/activity-map-shell/stargazers"><img src="https://img.shields.io/github/stars/Desktop-Tooling/activity-map-shell.svg?style=for-the-badge" alt="Stargazers"></a>
+  <a href="https://github.com/Desktop-Tooling/activity-map-shell/issues"><img src="https://img.shields.io/github/issues/Desktop-Tooling/activity-map-shell.svg?style=for-the-badge" alt="Issues"></a>
 
   <h1>Activity Map Shell</h1>
   <p>Windows GUI: 2D process/activity map with blocks, launcher, and window thumbnails.</p>
   <p>
-    <a href="https://github.com/AMDphreak/activity-map-shell/issues">Report Bug</a>
+    <a href="https://github.com/Desktop-Tooling/activity-map-shell/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/AMDphreak/activity-map-shell/issues">Request Feature</a>
+    <a href="https://github.com/Desktop-Tooling/activity-map-shell/issues">Request Feature</a>
   </p>
 </div>
 
@@ -83,9 +83,22 @@ pnpm start
 
 ## Usage
 
+- **App list:** Electron has no API for the Windows shell's app list. The app uses a PowerShell script that enumerates Start Menu and Desktop shortcuts (`.lnk` → target path) plus common executables and PATH-resolved names, which is the practical equivalent.
+
 Add blocks on the canvas, attach windows, connect related apps, and use Focus/Capture on blocks. Layout persists automatically under AppData.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Multi-monitor and display layout
+
+**Electron supports one window per display.** On launch the app creates one window per monitor (companion windows), each maximized on its own display. Each window shows the same activity map as a viewport (window position drives the visible slice of the canvas).
+
+The **Screen** button is in the **center** of the top bar. Its label is **Main Screen** on the primary monitor and **Screen 2**, **Screen 3**, etc. on others. The panel shows the **spatial layout** of monitors (2D position and bounds). You can set which display is "main" (used for the Root node position).
+
+## Reserved zone / other apps
+
+Windows does **not** let third-party apps register a "reserved" region that other apps avoid when maximizing. This app uses a **fixed top bar inside its own window** for navigation and dragging; it does not reserve screen space for other apps.
+
 
 ## Contributing
 
@@ -93,8 +106,8 @@ Fork the project, create a feature branch, commit, push, and open a pull request
 
 ### Top contributors
 
-<a href="https://github.com/AMDphreak/activity-map-shell/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AMDphreak/activity-map-shell" alt="contributors" />
+<a href="https://github.com/Desktop-Tooling/activity-map-shell/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Desktop-Tooling/activity-map-shell" alt="contributors" />
 </a>
 
 For per-person profile links, prefer [all-contributors](https://allcontributors.org/).
@@ -105,7 +118,7 @@ For per-person profile links, prefer [all-contributors](https://allcontributors.
 
 Ryan Johnson — [@amdphreak](https://twitter.com/amdphreak)
 
-Project Link: [https://github.com/AMDphreak/activity-map-shell](https://github.com/AMDphreak/activity-map-shell)
+Project Link: [https://github.com/Desktop-Tooling/activity-map-shell](https://github.com/Desktop-Tooling/activity-map-shell)
 
 Site: [https://ryanjohnson.dev](https://ryanjohnson.dev)
 
