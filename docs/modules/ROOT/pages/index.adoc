@@ -1,4 +1,17 @@
 = Activity Map Shell
+:description: Windows activity map for arranging processes and windows as connected blocks.
+:page-audience: Windows users and contributors evaluating Activity Map Shell
+:page-usage-context: Product overview and interaction reference
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-09-07
+
+ifndef::page-context-active[]
+[.page-context.page-context-lead]
+****
+Audience:: {page-audience}
+****
+endif::[]
 
 A Windows overlay that shows a temporal activity map of processes and windows. Blocks represent app instances; they connect to a root node and can be grouped into superblocks.
 
@@ -6,7 +19,7 @@ A Windows overlay that shows a temporal activity map of processes and windows. B
 
 * **Root** :: Placed at middle-left of the main display. All top-level blocks connect to it.
 * **Block** :: One process/window or a placeholder ("New app") until you launch or attach an app.
-* **Superblock** :: A group of blocks created by dragging one block onto another. The superblock title is derived from the first appΓÇÖs title or a common term among the first three child titles.
+* **Superblock** :: A group of blocks created by dragging one block onto another. The superblock title is derived from the first app's title or a common term among the first three child titles.
 
 == Creating blocks
 
@@ -21,9 +34,18 @@ A Windows overlay that shows a temporal activity map of processes and windows. B
 
 == Superblocks
 
-Drag one block onto another to create a superblock. The superblockΓÇÖs label is set from the first childΓÇÖs window title, or from a common term among the first three childrenΓÇÖs titles (words that tie for most occurrences, in order of first appearance).
+Drag one block onto another to create a superblock. The superblock's label is set from the first child's window title, or from a common term among the first three children's titles (words that tie for most occurrences, in order of first appearance).
 
 == Keyboard and window
 
 * **Esc** :: Hides (minimizes) the Activity Map window.
-* The app uses a single window (one Alt+Tab entry).
+* The app uses one companion window and one Alt+Tab entry.
+
+ifndef::page-context-active[]
+[.page-context.page-context-footer]
+****
+Original author:: {page-orig-author}
+Latest contributor:: {page-last-author}
+Last updated:: {page-last-edited}
+****
+endif::[]

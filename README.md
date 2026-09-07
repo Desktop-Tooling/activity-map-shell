@@ -8,6 +8,9 @@
   <h1>Activity Map Shell</h1>
   <p>Windows GUI: 2D process/activity map with blocks, launcher, and window thumbnails.</p>
   <p>
+    <a href="https://desktop-tooling.github.io/docs/activity-map-shell/"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
     <a href="https://github.com/Desktop-Tooling/activity-map-shell/issues">Report Bug</a>
     &middot;
     <a href="https://github.com/Desktop-Tooling/activity-map-shell/issues">Request Feature</a>
@@ -113,6 +116,10 @@ Fork the project, create a feature branch, commit, push, and open a pull request
 For per-person profile links, prefer [all-contributors](https://allcontributors.org/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the project history.
 
 ## Contact
 

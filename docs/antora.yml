@@ -1,3 +1,4 @@
 name: activity-map-shell
 title: Activity Map Shell
-version: master
+version: ~
+start_page: ROOT:index.adoc
