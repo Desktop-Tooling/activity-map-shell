@@ -2,6 +2,12 @@
 
 Notable functional changes to Activity Map Shell are listed here.
 
+## 2026-10-06 — antora-dark-mode and lockfile sync
+
+- Replaced retired `antora-dark-theme` with `antora-dark-mode` `^1.4.5` (Default UI overlay via `supplemental_files`).
+- Synced `pnpm-lock.yaml` with `package.json` so `antora` / dark-mode and other declared deps install under `--frozen-lockfile`.
+- Refreshed deprecated transitive `@xmldom/xmldom` 0.8.11 -> 0.8.15 (via electron-builder / plist) within range.
+
 ## 2026-09-07 — Antora component normalization
 
 - Normalized the Antora descriptor for continuous publishing.

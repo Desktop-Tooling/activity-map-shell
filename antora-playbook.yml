@@ -1,6 +1,6 @@
 # Antora playbook — single repo, local content (works in CI/CD from repo root)
 # Build: pnpm run docs (or: antora antora-playbook.yml)
-# Requires: pnpm add -D antora antora-dark-theme
+# Requires: pnpm add -D antora antora-dark-mode
 
 site:
   title: Activity Map Shell
@@ -16,7 +16,7 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
-  supplemental_files: ./node_modules/antora-dark-theme/supplemental-ui
+  supplemental_files: ./node_modules/antora-dark-mode/supplemental-ui
 
 output:
   dir: antora/build/site
