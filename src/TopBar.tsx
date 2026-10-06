@@ -37,7 +37,7 @@ export function TopBar({ displayLabel = 'Screen', onScreenConfigClick, screenCon
           title="Minimize"
           aria-label="Minimize"
         >
-          ΓÇö
+          —
         </button>
         <button
           type="button"
@@ -46,7 +46,7 @@ export function TopBar({ displayLabel = 'Screen', onScreenConfigClick, screenCon
           title="Close"
           aria-label="Close"
         >
-          ├ù
+          ×
         </button>
       </div>
     </header>

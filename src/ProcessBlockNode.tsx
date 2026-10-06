@@ -117,7 +117,7 @@ function ProcessBlockNode({ id, data, selected }: NodeProps<ProcessBlockData>) {
                 title="Capture window thumbnail"
                 disabled={capturing}
               >
-                {capturing ? '╬ô├ç┬¬' : 'Γëí╞Æ├┤Γòû'}
+                {capturing ? '…' : '📷'}
               </button>
             </>
           )}
@@ -180,7 +180,7 @@ function AppLauncherPopup({ onClose, onLaunch, onAttachWindow }: AppLauncherPopu
             ref={searchInputRef}
             type="search"
             className="app-launcher-search"
-            placeholder="Search apps╬ô├ç┬¬"
+            placeholder="Search apps…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             autoFocus
@@ -204,7 +204,7 @@ function AppLauncherPopup({ onClose, onLaunch, onAttachWindow }: AppLauncherPopu
                   type="button"
                   className="app-launcher-tile"
                   onClick={() => onLaunch(a.path)}
-                  title={`${a.name}${a.count > 0 ? ` (used ${a.count}Γö£├╣)` : ''}`}
+                  title={`${a.name}${a.count > 0 ? ` (used ${a.count}×)` : ''}`}
                 >
                   <span className="app-launcher-icon">{a.name.slice(0, 2).toUpperCase()}</span>
                   <span className="app-launcher-tile-name">{a.name}</span>

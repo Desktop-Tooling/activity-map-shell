@@ -529,7 +529,7 @@ function FlowWithContext() {
             <Background color="#2d2d30" gap={16} size={1} />
             <Controls />
             <Panel position="top-left" className="panel-title">
-              Activity Map ╬ô├ç├╢ drag block onto another to group Γö¼Γòû all connect to Root
+              Activity Map — drag block onto another to group · all connect to Root
             </Panel>
             <Panel position="bottom-center" className="panel-autoalign">
               <button type="button" className="app-autoalign-btn" onClick={runAutoalign}>
@@ -584,7 +584,7 @@ function ScreenConfigPanel({ onClose }: { onClose: () => void }) {
           {displays.map((d, index) => (
             <li key={d.id} className="screen-config-item">
               <span className="screen-config-bounds">
-                {displayLabelWithSpatial(d, primary, index)} Γö¼Γòû ({d.bounds.x}, {d.bounds.y}) {d.bounds.width}Γö£├╣{d.bounds.height}
+                {displayLabelWithSpatial(d, primary, index)} · ({d.bounds.x}, {d.bounds.y}) {d.bounds.width}×{d.bounds.height}
               </span>
               {d.primary && <span className="screen-config-badge">Main</span>}
               <button type="button" onClick={() => { window.activityMapAPI.setMainDisplay(d.id); onClose(); }}>Set as main</button>

@@ -304,7 +304,7 @@ html, body, #root {
   color: #71717a;
 }
 
-/* App launcher ╬ô├ç├╢ full-screen style with search and icon grid (90% opacity) */
+/* App launcher — full-screen style with search and icon grid (90% opacity) */
 .app-launcher-overlay {
   position: fixed;
   inset: 0;
